@@ -1,0 +1,15 @@
+#header-icon {
+  border-radius: 25px;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #010409;
+}
+#header-list {
+  display: flex;
+}
+#header-item {
+  margin: 15px;
+}
