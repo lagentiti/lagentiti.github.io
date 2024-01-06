@@ -1,0 +1,26 @@
+#header-icon {
+  border-radius: 25px;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #010409;
+}
+#header-list {
+  display: flex;
+}
+#header-item {
+  margin: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+#header-item-link:hover {
+  transition-duration: 0.5s;
+  color: #bf0603;
+}
+/*
+  #VforVictory 🐝
+  :akaruuU: (comment ca tu follow pas https://www.twitch.tv/akaruu ???)
+  RED > ALL colors
+*/

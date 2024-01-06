@@ -1,0 +1,64 @@
+#title,
+#description,
+#item-link {
+  color: black !important;
+}
+#item-link:hover {
+  transition-duration: 0.5s;
+  color: #bf0603;
+}
+#item {
+  padding: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+#top {
+  display: flex;
+  justify-content: space-between;
+}
+#description {
+  width: 600px;
+  padding-top: 10px;
+}
+#title {
+  font-size: 25px;
+}
+#playerTxt {
+  color: black;
+}
+#bottom {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+#playerCube {
+  cursor: pointer;
+  padding: 20px;
+  background-color: rgb(228, 228, 228);
+}
+#playerLeft,
+#playerRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+#item-link {
+  background-color: #bf0603;
+  border-radius: 15px;
+  padding: 10px;
+  color: white !important;
+  display: flex;
+}
+#item-link:hover {
+  background-color: #a00f0d;
+}
+#linkList {
+  display: flex;
+  margin-top: 15px;
+}
+/*
+  #VforVictory 🐝
+  :akaruuU: (comment ca tu follow pas https://www.twitch.tv/akaruu ???)
+  RED > ALL colors
+*/
