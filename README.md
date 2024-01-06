@@ -1,6 +1,6 @@
 # lagentiti.github.io
 
-# <name>.json Example in ./projects/
+# < name >.json Example in ./projects/
 ```json
 {
   "name": "",
