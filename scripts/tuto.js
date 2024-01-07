@@ -1,19 +1,19 @@
 let xhr1 = new XMLHttpRequest();
 
 xhr1.onreadystatechange = (e) => {
-  if (xhr.readyState !== 4) {
+  if (xhr1.readyState !== 4) {
     return;
   }
   if (xhr1.status === 200) {
     let json = JSON.parse(xhr1.responseText);
 
-    for(i=0;i<=3;i++) {
+    for(i=0;i<=json.length;i++) {
       document.getElementById("tutoList").innerHTML = document.getElementById("tutoList").innerHTML +
       `
       <li id="projectListItem">
-        <a id="projectItem" href="./project.html?p=${json[i].id}">
+        <a id="projectItem" href${json[i].link}">
           <div id="projectLeft">
-            <img src="${json[i].icon}" width="120px" height="120px">
+            <img src="${json[i].icon}" width="220px" height="120px">
           </div>
           <div id="projectRight">
             <div id="projectTitle">
