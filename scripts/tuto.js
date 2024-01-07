@@ -11,7 +11,7 @@ xhr1.onreadystatechange = (e) => {
       document.getElementById("tutoList").innerHTML = document.getElementById("tutoList").innerHTML +
       `
       <li id="projectListItem">
-        <a id="projectItem" href${json[i].link}">
+        <a id="projectItem" href='${json[i].link}'>
           <div id="projectLeft">
             <img src="${json[i].icon}" width="220px" height="120px">
           </div>
