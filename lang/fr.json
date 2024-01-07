@@ -1,7 +1,18 @@
 {
   "footer": {
-    "title1": "",
-    "title2": "",
-    "title3": ""
+    "title1": "RÉSEAUX SOCIAUX",
+    "title2": "DERNIERS PROJECTS",
+    "title3": "DERNIERS JEUX",
+    "title4": "DERNIERS TUTOS"
+  },
+  "header": {
+    "title1": "Projects",
+    "title2": "Tutos"
+  },
+  "index": {
+
+  },
+  "project": {
+
   }
 }

@@ -14,6 +14,7 @@ xhr.onreadystatechange = (e) => {
     document.getElementById("description").innerHTML = json.description;
     document.getElementById("itemImage").src = json.picture.couverture;
     pictureMax = json.picture.galery.length-1;
+    document.getElementById("titleHtml").innerHTML = "lagent_titi " + json.name;
 
     if(json.picture.videoId !== "") {
       document.getElementById("picture").innerHTML =

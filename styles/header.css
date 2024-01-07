@@ -15,9 +15,27 @@ header {
   margin-left: 0px;
   margin-right: 0px;
 }
-#header-item-link:hover {
+#header-item-link1:hover,
+#header-item-link2:hover {
   transition-duration: 0.5s;
   color: #bf0603;
+}
+#lang {
+  background-color: #bf0603;
+  display: none;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+#buttonLang {
+  background-color: #010409;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+option,
+select {
+  color: black !important;
 }
 /*
   #VforVictory 🐝

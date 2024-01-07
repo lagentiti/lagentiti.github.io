@@ -26,3 +26,15 @@
   ]
 }
 ```
+
+# tutos.json example
+```json
+...
+{
+  "id": "",
+  "name": "",
+  "description": "",
+  "icon": "",
+  "link": "",
+}
+```

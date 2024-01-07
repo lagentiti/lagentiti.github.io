@@ -1,0 +1,41 @@
+#projectTitle,
+#projectDescription {
+  color: black;
+}
+#projectItem {
+  display: flex;
+}
+#tutoList {
+  padding: 75px;
+  padding-left: 190px;
+  padding-right: 190px;
+}
+#projectRight {
+  padding-left: 10px;
+}
+#projectTitle {
+  font-size: 22px;
+}
+#projectRight {
+  padding-top: 10px;
+}
+#projectDescription {
+  padding-top: 5px;
+}
+#projectListItem {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#projectItem {
+  background-color: rgb(228, 228, 228);
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 1000px;
+}
+/*
+  #VforVictory 🐝
+  :akaruuU: (comment ca tu follow pas https://www.twitch.tv/akaruu ???)
+  RED > ALL colors
+*/

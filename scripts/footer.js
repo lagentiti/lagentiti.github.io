@@ -18,7 +18,7 @@ function jsonFileList() {
 };
 
 function projectList(max) {
-  for(i=1;i<=max;i++) {
+  for(i=0;i<=max;i++) {
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = (e) => {
@@ -29,8 +29,8 @@ function projectList(max) {
         let json = JSON.parse(xhr.responseText);
         return document.getElementById("footer-item2-list").innerHTML = document.getElementById("footer-item2-list").innerHTML +
         `
-        <li id="footer-item1-list-item">
-          <a id="footer-item1-list-item-link" href="./project.html?p=${json.id}">
+        <li id="footer-item2-list-item">
+          <a id="footer-item2-list-item-link" href="./project.html?p=${json.id}">
             ${json.name}
           </a>
         </li>
@@ -40,6 +40,31 @@ function projectList(max) {
     xhr.open('GET', `./projects/${i}.json`);
     xhr.send();
   };
+};
+
+function tutoList() {
+  let xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = (e) => {
+    if (xhr.readyState !== 4) {
+      return;
+    }
+    if (xhr.status === 200) {
+      let json = JSON.parse(xhr.responseText);
+      for(i=0;i<=3;i++) {
+        document.getElementById("footer-item4-list").innerHTML = document.getElementById("footer-item4-list").innerHTML +
+        `
+        <li id="footer-item4-list-item">
+          <a id="footer-item4-list-item-link" href="${json[i].link}">
+            ${json[i].name}
+          </a>
+        </li>
+        `;
+      };
+    };
+  };
+  xhr.open('GET', `./tutos.json`);
+  xhr.send();
 };
 
 jsonFileList();
@@ -52,6 +77,7 @@ setTimeout(() => {
     var max = 3;
   }
   projectList(max);
+  tutoList();
 }, 10);
 /*
   #VforVictory 🐝
