@@ -63,6 +63,7 @@ function setLang(lang) {
   if(lang !== undefined) {
     localStorage.setItem("lang", lang);
     document.getElementById("lang").style.display = "none";
+    location.reload();
   };
 };
 
