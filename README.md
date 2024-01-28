@@ -35,6 +35,44 @@
   "name": "",
   "description": "",
   "icon": "",
-  "link": "",
+  "link": ""
 }
+```
+
+# about.json example
+```json
+...
+"param": {
+  "name": "name",
+  "html": [
+    "<div>",
+    "</div>"
+  ]
+}
+```
+
+# script for html to json html (by bingAI)
+```js
+function textToArray(text) {
+  // Divise le texte en lignes en utilisant le caractère de nouvelle ligne comme séparateur
+  var lines = text.split('\n');
+
+  // Crée un nouveau tableau où chaque ligne est un élément
+  var array = lines.map(function(line) {
+      // Remplace les apostrophes par des guillemets et vice versa
+      line = line.split('').map(function(char) {
+          if (char === "'") return '"';
+          if (char === '"') return "'";
+          return char;
+      }).join('');
+      return '"' + line + '"';
+  });
+
+  // Retourne le tableau sous forme de chaîne de caractères
+  return '[\n' + array.join(',\n') + '\n]';
+}
+
+// Exemple d'utilisation
+var text = `texte`;
+console.log(textToArray(text));
 ```
