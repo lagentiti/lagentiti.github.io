@@ -7,8 +7,8 @@ let langOptions = {
     {
       "code": "en",
       "name": "english"
-    },
-  ],
+    }
+  ]
 };
 
 let xhr = new XMLHttpRequest();
@@ -22,12 +22,8 @@ xhr.onreadystatechange = (e) => {
   if (xhr.status === 200) {
     json = JSON.parse(xhr.responseText);
 
-    header(json);
-    footer(json);
-    index(json);
-    project(json);
-    tuto(json);
-    projectList(json);
+    lang_header(json);
+    lang_footer(json);
   };
 };
 if(lang !== null) {
@@ -59,41 +55,31 @@ if(lang !== null) {
   }, 10);
 };
 
-function setLang(lang) {
-  if(lang !== undefined) {
-    localStorage.setItem("lang", lang);
+function setLang(lang2) {
+  if(lang2 !== undefined) {
+    localStorage.setItem("lang", lang2);
     document.getElementById("lang").style.display = "none";
     location.reload();
   };
 };
 
-function header(lang) {
-  document.getElementById("header-item-link1").innerHTML = lang.header.title1;
-  document.getElementById("header-item-link2").innerHTML = lang.header.title2;
+function lang_header(lang2) {
+  document.getElementById("header-item-link1").innerHTML = lang2.header.title1;
+  document.getElementById("header-item-link2").innerHTML = lang2.header.title2;
+  document.getElementById("header-item-link3").innerHTML = lang2.header.title3;
 };
 
-function footer(lang) {
-  document.getElementById("footer-item1-title").innerHTML = lang.footer.title1;
-  document.getElementById("footer-item2-title").innerHTML = lang.footer.title2;
-  document.getElementById("footer-item3-title").innerHTML = lang.footer.title3;
-  document.getElementById("footer-item4-title").innerHTML = lang.footer.title4;
+function lang_footer(lang2) {
+  document.getElementById("footer-item1-title").innerHTML = lang2.footer.title1;
+  document.getElementById("footer-item2-title").innerHTML = lang2.footer.title2;
+  document.getElementById("footer-item3-title").innerHTML = lang2.footer.title3;
+  document.getElementById("footer-item4-title").innerHTML = lang2.footer.title4;
 };
 
-function index(lang) {
-
-};
-
-function project(lang) {
+function lang_index(lang2) {
 
 };
 
-function tuto(lang) {
-
-};
-
-function projectList() {
-
-};
 /*
   #VforVictory 🐝
   :akaruuU: (comment ca tu follow pas https://www.twitch.tv/akaruu ???)
