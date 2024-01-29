@@ -1,0 +1,4 @@
+Contact: @lagent_titi on twiter
+Encryption:
+Preferred-Languages: fr
+Canonical: https://lagentiti.github.io/security.txt
