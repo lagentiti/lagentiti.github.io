@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /html/
+Disallow: /lang/
+Disallow: /projects/
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /.editorconfig
+Disallow: /about.json
+Disallow: /README.md
+Disallow: /tutos.json
