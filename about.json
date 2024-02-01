@@ -68,7 +68,7 @@
       "code: CSGO-vD5hE-Hq9qZ-xpZUy-2FVOV-5PSFE",
       "              </div>",
       "              <div id='copy' onclick='copy(\"crosshair\")'>Copy</div>",
-      "              <div id='title-config'>CROSSHAIR :</div>",
+      "              <div id='title-config'>SONG :</div>",
       "              <div id='code-config'>",
       "                <div id='songtxt' contentEditable='true' style='border: solid 1px black; overflow: auto;'>",
       "EQ profile: crisp<br>",
@@ -76,7 +76,7 @@
       "                </div>",
       "                <div id='copy' onclick='copy(\"songtxt\")'>Copy</div>",
       "              </div>",
-      "              <div id='title-config'>CROSSHAIR :</div>",
+      "              <div id='title-config'>NVIDIA :</div>",
       "              <div id='code-config'>",
       "                <div id='nvtxt' contentEditable='true' style='border: solid 1px black; overflow: auto;'>",
       "digital shine: 100%",
@@ -159,11 +159,8 @@
   },
   "config": {
     "name": "config",
-    "txt": {
-      "fr": {
+    "html": [
 
-      }
-    },
-    "html": []
+    ]
   }
 }
