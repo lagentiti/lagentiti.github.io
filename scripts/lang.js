@@ -26,12 +26,14 @@ xhr.onreadystatechange = (e) => {
     lang_header(json);
     lang_footer(json);
 
-    if(url == "index" || "" || " ") {
-      lang_index(json);
-    };
-    if(url == "about") {
-      lang_about(json, new URLSearchParams(window.location.search).get('p'));
-    };
+    setInterval(() => {
+      if(url == "index" || "" || " ") {
+        lang_index(json);
+      };
+      if(url == "about") {
+        lang_about(json, new URLSearchParams(window.location.search).get('p'));
+      };
+    }, 50);
   };
 };
 if(lang !== null) {
@@ -100,8 +102,3 @@ function lang_about(lang2, option) {
     document.getElementById(`about-${i+1}`).innerHTML = lang2.about[option2].txt[i];
   };
 };
-/*
-  #VforVictory 🐝
-  :akaruuU: (comment ca tu follow pas https://www.twitch.tv/akaruu ???)
-  RED > ALL colors
-*/
