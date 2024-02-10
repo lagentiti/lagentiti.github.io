@@ -1,0 +1,13 @@
+/* TEAM */
+  Developer: lagent_titi
+  Twitter: @lagent_titi
+  From: Canada
+
+/* THANKS */
+  HELP: BingAI
+  SITE: https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1
+
+/* SITE */
+  Last update:2024/01/29
+  Language: English / French
+  IDE: VScode

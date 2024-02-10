@@ -8,12 +8,27 @@
   "header": {
     "title1": "Projects",
     "title2": "Tutos",
-    "title3": "à propos"
+    "title3": "à propos",
+    "title4": ""
   },
   "index": {
 
   },
   "project": {
 
+  },
+  "about": {
+    "cs2": {
+
+    },
+    "main": {
+      "max": 1,
+      "txt": [
+        "Salut, moi s'est l'agent titi.<br>J'adore coder et jouer a cs2 !<br>Bientot plus d'info ici :))"
+      ]
+    },
+    "config": {
+
+    }
   }
 }

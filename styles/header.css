@@ -15,8 +15,7 @@ header {
   margin-left: 0px;
   margin-right: 0px;
 }
-#header-item-link1:hover,
-#header-item-link2:hover {
+.header-item-link:hover {
   transition-duration: 0.5s;
   color: #bf0603;
 }

@@ -76,3 +76,29 @@ function textToArray(text) {
 var text = `texte`;
 console.log(textToArray(text));
 ```
+
+# sitemap
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ...
+  <url>
+    <loc>http://lagentiti.github.io/example.html</loc>
+    <lastmod>2024-01-29</lastmod>
+  </url>
+  ...
+</urlset>
+```
+
+# actus.json example
+```json
+...
+{
+  "id": "",
+  "title": "",
+  "description": "",
+  "image": "",
+  "link": ""
+}
+```

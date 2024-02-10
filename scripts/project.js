@@ -1,5 +1,5 @@
-const param = new URLSearchParams(window.location.search).get('p');
-const xhr = new XMLHttpRequest();
+let param = new URLSearchParams(window.location.search).get('p');
+let xhr = new XMLHttpRequest();
 
 var picture = 0;
 var pictureMax = 0;

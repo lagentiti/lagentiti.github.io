@@ -14,6 +14,7 @@ let langOptions = {
 let xhr = new XMLHttpRequest();
 var json = "";
 let lang = localStorage.getItem("lang");
+let url = window.location.href.split('/')[3].split(".html")[0];
 
 xhr.onreadystatechange = (e) => {
   if (xhr.readyState !== 4) {
@@ -24,6 +25,13 @@ xhr.onreadystatechange = (e) => {
 
     lang_header(json);
     lang_footer(json);
+
+    if(url == "index" || "" || " ") {
+      lang_index(json);
+    };
+    if(url == "about") {
+      lang_about(json, new URLSearchParams(window.location.search).get('p'));
+    };
   };
 };
 if(lang !== null) {
@@ -67,6 +75,7 @@ function lang_header(lang2) {
   document.getElementById("header-item-link1").innerHTML = lang2.header.title1;
   document.getElementById("header-item-link2").innerHTML = lang2.header.title2;
   document.getElementById("header-item-link3").innerHTML = lang2.header.title3;
+  document.getElementById("header-item-link4").innerHTML = lang2.header.title4;
 };
 
 function lang_footer(lang2) {
@@ -76,10 +85,21 @@ function lang_footer(lang2) {
   document.getElementById("footer-item4-title").innerHTML = lang2.footer.title4;
 };
 
-function lang_index(lang2) {
+function lang_index() {
 
 };
 
+function lang_about(lang2, option) {
+  var option2;
+  if(option == null) {
+    option2 = "main";
+  } else {
+    option2 = option;
+  };
+  for(i=0;i<=lang2.about[option2].max-1;i++) {
+    document.getElementById(`about-${i+1}`).innerHTML = lang2.about[option2].txt[i];
+  };
+};
 /*
   #VforVictory 🐝
   :akaruuU: (comment ca tu follow pas https://www.twitch.tv/akaruu ???)
