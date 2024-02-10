@@ -11,66 +11,67 @@ let langOptions = {
   ]
 };
 
-let xhr = new XMLHttpRequest();
-var json = "";
-let lang = localStorage.getItem("lang");
-let url = window.location.href.split('/')[3].split(".html")[0];
+function getLang() {
+  let xhr = new XMLHttpRequest();
+  var json = "";
+  let lang = localStorage.getItem("lang");
+  let url = window.location.href.split('/')[3].split(".html")[0];
 
-xhr.onreadystatechange = (e) => {
-  if (xhr.readyState !== 4) {
-    return;
-  }
-  if (xhr.status === 200) {
-    json = JSON.parse(xhr.responseText);
+  xhr.onreadystatechange = (e) => {
+    if (xhr.readyState !== 4) {
+      return;
+    }
+    if (xhr.status === 200) {
+      json = JSON.parse(xhr.responseText);
 
-    lang_header(json);
-    lang_footer(json);
+      lang_header(json);
+      lang_footer(json);
 
-    setInterval(() => {
-      if(url == "index" || "" || " ") {
-        lang_index(json);
+      setInterval(() => {
+        if(url == "index" || "" || " ") {
+          lang_index(json);
+        };
+        if(url == "about") {
+          lang_about(json, new URLSearchParams(window.location.search).get('p'));
+        };
+      }, 50);
+    };
+  };
+  if(lang !== null) {
+    setTimeout(() => {
+      xhr.open('GET', `./lang/${lang}.json`);
+      xhr.send();
+    }, 10);
+  } else {
+    xhr.open('GET', `./lang/fr.json`);
+    xhr.send();
+    setTimeout(() => {
+      var langs = "";
+      for(i=0;i<=langOptions.list.length-1;i++) {
+        langs = langs + `<option value="${langOptions.list[i].code}">${langOptions.list[i].name}</option>`;
       };
-      if(url == "about") {
-        lang_about(json, new URLSearchParams(window.location.search).get('p'));
-      };
-    }, 50);
+      setTimeout(() => {
+        document.getElementById("lang").innerHTML =
+        `
+        <div>
+          Choisire la langue du site
+        </div>
+        <div style="padding: 15px;"></div>
+        <select id="liste">${langs}</select>
+        <div style="padding: 15px;"></div>
+        <div id="buttonLang" onclick="setLang(document.getElementById('liste').options[document.getElementById('liste').selectedIndex].value);">Validé</div>
+        `;
+        document.getElementById("lang").style.display = "flex";
+      }, 10);
+    }, 10);
   };
 };
-if(lang !== null) {
-  setTimeout(() => {
-    xhr.open('GET', `./lang/${lang}.json`);
-    xhr.send();
-  }, 10);
-} else {
-  xhr.open('GET', `./lang/fr.json`);
-  xhr.send();
-  setTimeout(() => {
-    var langs = "";
-    for(i=0;i<=langOptions.list.length-1;i++) {
-      langs = langs + `<option value="${langOptions.list[i].code}">${langOptions.list[i].name}</option>`;
-    };
-    setTimeout(() => {
-      document.getElementById("lang").innerHTML =
-      `
-      <div>
-        Choisire la langue du site
-      </div>
-      <div style="padding: 15px;"></div>
-      <select id="liste">${langs}</select>
-      <div style="padding: 15px;"></div>
-      <div id="buttonLang" onclick="setLang(document.getElementById('liste').options[document.getElementById('liste').selectedIndex].value);">Validé</div>
-      `;
-      document.getElementById("lang").style.display = "flex";
-    }, 10);
-  }, 10);
-};
+getLang();
 
 function setLang(lang2) {
-  if(lang2 !== undefined) {
-    localStorage.setItem("lang", lang2);
-    document.getElementById("lang").style.display = "none";
-    location.reload();
-  };
+  localStorage.setItem("lang", lang2);
+  document.getElementById("lang").style.display = "none";
+  location.reload();
 };
 
 function lang_header(lang2) {
@@ -98,7 +99,7 @@ function lang_about(lang2, option) {
   } else {
     option2 = option;
   };
-  for(i=0;i<=lang2.about[option2].max-1;i++) {
+  for(i=0;i<=lang2.about[option2].txt.length-1;i++) {
     document.getElementById(`about-${i+1}`).innerHTML = lang2.about[option2].txt[i];
   };
 };

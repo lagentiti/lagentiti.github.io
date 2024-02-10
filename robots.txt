@@ -12,5 +12,4 @@ Disallow: /humans.txt
 Disallow: /security.txt
 Disallow: /actus.json
 Disallow: /img/
-Disallow: /actus.html
 Disallow: /project.html

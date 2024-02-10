@@ -16,5 +16,18 @@
   },
   "project": {
 
+  },
+  "about": {
+    "cs2": {
+
+    },
+    "main": {
+      "txt": [
+        "Hi, I'm l'agent titi.<br>I love coding and playing CS2!<br>More info soon here :))"
+      ]
+    },
+    "config": {
+
+    }
   }
 }
