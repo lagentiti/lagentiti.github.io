@@ -59,10 +59,9 @@ function textToArray(text) {
 
   // Crée un nouveau tableau où chaque ligne est un élément
   var array = lines.map(function(line) {
-      // Remplace les apostrophes par des guillemets et vice versa
+      // Ajoute un antislash avant et après chaque guillemet
       line = line.split('').map(function(char) {
-          if (char === "'") return '"';
-          if (char === '"') return "'";
+          if (char === '"') return '\\"';
           return char;
       }).join('');
       return '"' + line + '"';
