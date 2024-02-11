@@ -7,6 +7,122 @@
   font-size: 19px;
   color: whitesmoke;
 }
-body {
-
+footer {
+  background-color: #010409;
+}
+#footer-top {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+#footer-item1-list,
+#footer-item2-list,
+#footer-item3-list,
+#footer-item4-list {
+  padding: 5px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+#footer-item1-list-item,
+#footer-item2-list-item,
+#footer-item3-list-item,
+#footer-item4-list-item {
+  padding-top: 5px;
+}
+#footer-item1-list-item-link:hover,
+#footer-item2-list-item-link:hover,
+#footer-item3-list-item-link:hover,
+#footer-item4-list-item-link:hover,
+#footer-bottom-item:hover {
+  transition-duration: 0.5s;
+  color: #bf0603;
+}
+#footer-down {
+  background-color: #bf0603;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+#footer-inter,
+#footer-bottom,
+#footer-bottom-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#footer-bottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+#footer-inter-block {
+  width: 85%;
+  height: 1px;
+  background-color: #bf0603;
+  border-radius: 15px;
+}
+#footer-bottom-item {
+  cursor: pointer;
+}
+#footer-item-list-inter {
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  width: 1px;
+  height: 24px;
+  background-color: #bf0603;
+}
+#header-icon {
+  border-radius: 25px;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #010409;
+}
+#header-list {
+  display: flex;
+}
+#header-item {
+  margin: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.header-item-link:hover {
+  transition-duration: 0.5s;
+  color: #bf0603;
+}
+#lang {
+  background-color: #bf0603;
+  display: none;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+#buttonLang {
+  background-color: #010409;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+option,
+select {
+  color: black !important;
+}
+@media screen and (max-width: 500px) {
+  #lang {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 15px;
+  }
+  #footer-top {
+    flex-direction: column;
+    padding: 15px;
+    padding-top: 51px;
+  }
 }

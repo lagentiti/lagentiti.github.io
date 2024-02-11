@@ -57,3 +57,17 @@
   display: flex;
   margin-top: 15px;
 }
+@media screen and (max-width: 500px) {
+  #item {
+    padding: 25px;
+  }
+  #top {
+    flex-direction: column;
+  }
+  #right {
+    padding-top: 15px;
+  }
+  #description {
+    width: auto;
+  }
+}

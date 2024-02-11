@@ -10,13 +10,7 @@
   <link rel="stylesheet" href="./styles/all.css">
   <link rel="stylesheet" href="./styles/index.css">
   <script src="./scripts/index.js"></script>
-  <script src="./scripts/import.js"></script>
   <script src="./scripts/theme.js"></script>
-  <script src="./scripts/footer.js" defer></script>
-  <script>
-    html("header");
-    html("footer");
-  </script>
 </head>
 <body>
   <div id="lang"></div>
@@ -41,8 +35,14 @@
     </div>
   </app>
   <div id="footer"></div>
+  <script src="./scripts/import.js"></script>
+  <script>
+    html("header");
+    html("footer");
+  </script>
   <script src="./scripts/lang.js" defer>
     lang_index();
   </script>
+  <script src="./scripts/footer.js" defer></script>
 </body>
 </html>

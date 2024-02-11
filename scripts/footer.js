@@ -74,6 +74,6 @@ function settingTxtColor() {
 
 setTimeout(() => {
   settingTxtColor();
-}, 50);
-projectList();
-tutoList();
+  projectList();
+  tutoList();
+}, 60);

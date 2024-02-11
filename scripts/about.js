@@ -67,4 +67,6 @@ function About() {
   xhr.open('GET', `./about.json`);
   xhr.send();
 };
-About();
+setTimeout(() => {
+  About();
+}, 50);

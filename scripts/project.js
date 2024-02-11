@@ -1,10 +1,11 @@
 var picture = 0;
 var pictureMax = 0;
+var maxrequest = 0;
 
 function Project() {
   let param = new URLSearchParams(window.location.search).get('p');
-  
   let xhr = new XMLHttpRequest();
+
 
   xhr.onreadystatechange = (e) => {
     if (xhr.readyState !== 4) {
@@ -20,47 +21,43 @@ function Project() {
       };
     };
     if (xhr.status === 200) {
-      let json = JSON.parse(xhr.responseText);
-      
-      document.getElementById("title").innerHTML = json.name;
-      document.getElementById("description").innerHTML = json.description;
-      document.getElementById("itemImage").src = json.picture.couverture;
-      pictureMax = json.picture.galery.length-1;
-      document.getElementById("titleHtml").innerHTML = "lagent_titi " + json.name;
+      if(maxrequest == 0) {
+        let json = JSON.parse(xhr.responseText);
+        
+        maxrequest++;
+        
+        document.getElementById("title").innerHTML = json.name;
+        document.getElementById("description").innerHTML = json.description;
+        document.getElementById("itemImage").src = json.picture.couverture;
+        pictureMax = json.picture.galery.length-1;
+        document.getElementById("titleHtml").innerHTML = "lagent_titi " + json.name;
 
-      if(json.picture.videoId !== "") {
-        document.getElementById("picture").innerHTML =
-        `
-        <iframe id="picture0" width="900" height="400" src="https://www.youtube.com/embed/${json.picture.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        `;
-      };
+        if(json.picture.videoId !== "") {
+          document.getElementById("picture").innerHTML =
+          `
+          <iframe id="picture0" width="900" height="400" src="https://www.youtube.com/embed/${json.picture.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          `;
+        };
 
-      var datamax = 0;
-      var datamax2 = 0;
-
-      for(i=0;i<=json.picture.galery.length-1;i++) {
-        if(datamax2 !== json.picture.galery.length-1) {
+        for(i=0;i<=json.picture.galery.length-1;i++) {
           document.getElementById("picture").innerHTML = document.getElementById("picture").innerHTML +
           `
           <div id="picture${i+1}" style="display: none;">
             <img src="${json.picture.galery[i]}" width="900" height="400">
           </div>
           `;
-          datamax2++
         };
-      };
-      
-      for(i=0;i<=json.links.length-1;i++) {
-        if(datamax !== json.links.length-1) {
+        
+        for(a=0;a<=json.links.length;a++) {
           document.getElementById("linkList").innerHTML = document.getElementById("linkList").innerHTML +
           `
           <li>
-            <a id="item-link" href="${json.links[i].link}">${json.links[i].name}</a>
+            <a id="item-link" href="${json.links[a].link}">${json.links[a].name}</a>
           </li>
           <div style="margin: 10px;"></div>
           `;
-          datamax++
         };
+
       };
     };
   };
@@ -68,9 +65,7 @@ function Project() {
   xhr.send();
 };
 
-setTimeout(() => {
-  Project();
-}, 10)
+Project();
 
 function buttonPicture(option) {
   if(option == 1) {

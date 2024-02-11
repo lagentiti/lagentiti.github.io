@@ -34,3 +34,8 @@
   border-radius: 5px;
   min-width: 1000px;
 }
+@media screen and (max-width: 500px) {
+  #projectItem {
+    min-width: auto;
+  }
+}

@@ -24,10 +24,9 @@ function getLang() {
     if (xhr.status === 200) {
       json = JSON.parse(xhr.responseText);
 
-      lang_header(json);
-      lang_footer(json);
-
       setInterval(() => {
+        lang_header(json);
+        lang_footer(json);
         if(url == "index" || "" || " ") {
           lang_index(json);
         };
