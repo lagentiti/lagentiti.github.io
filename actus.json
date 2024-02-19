@@ -1,9 +1,15 @@
 [
   {
     "id": 1,
-    "title": "Test sdajsdhajsd",
-    "description": "bonjour sadkas nd daskd jaskod sadsda ! dadasda !",
-    "image": "",
-    "link": ""
+    "en": {
+      "title": "Twitch Username Rainbow Color Extension",
+      "description": "I coded a google chrome extension that allows you to change the color of your twitch nickname in the chat automatically !"
+    },
+    "fr": {
+      "title": "Twitch Username Rainbow Color Extension",
+      "description": "J'ai codé une extension google chrome qui vous permet de changer de couleur de votre pseudo twitch dans le tchat automatiquement !"
+    },
+    "image": "./img/Twitch-Username-Rainbow-Color-Extension/example.png",
+    "link": "./project.html?p=0"
   }
 ]

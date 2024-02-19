@@ -5,9 +5,9 @@
   "picture": {
     "icon": "https://raw.githubusercontent.com/lagentiti/Twitch-Username-Rainbow-Color-Extension/main/icons/icon128.png",
     "couverture": "./img/Twitch-Username-Rainbow-Color-Extension/couverture.png",
-    "videoId": "",
+    "videoId": "0000000",
     "galery": [
-      ""
+      "./img/Twitch-Username-Rainbow-Color-Extension/example.png"
     ]
   },
   "links": [

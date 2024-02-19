@@ -29,10 +29,13 @@
   padding-bottom: 15px;
 }
 #projectItem {
-  background-color: rgb(228, 228, 228);
+  background-color: whitesmoke;
   padding: 10px;
   border-radius: 5px;
   min-width: 1000px;
+}
+#projectItem:hover {
+  background-color: rgb(228, 228, 228)
 }
 @media screen and (max-width: 500px) {
   #projectItem {

@@ -1,3 +1,29 @@
 #actus {
   padding: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#actus-item-txt-title,
+#actus-item-txt-description {
+  color: black;
+}
+#actus-item {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+}
+#actus-item-txt-description {
+  max-width: 1000px;
+}
+#actus-item-txt-title {
+  font-size: 25px;
+}
+#actus-item:hover {
+  background-color: rgb(201, 198, 198)
+}
+img {
+  max-width: 500px;
 }

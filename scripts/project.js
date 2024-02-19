@@ -20,7 +20,7 @@ function Project() {
         document.getElementById("titleHtml").innerHTML = "error 404";
       };
     };
-    if (xhr.status === 200) {
+    if(xhr.status === 200) {
       if(maxrequest == 0) {
         let json = JSON.parse(xhr.responseText);
         
@@ -29,8 +29,7 @@ function Project() {
         document.getElementById("title").innerHTML = json.name;
         document.getElementById("description").innerHTML = json.description;
         document.getElementById("itemImage").src = json.picture.couverture;
-        pictureMax = json.picture.galery.length-1;
-        document.getElementById("titleHtml").innerHTML = "lagent_titi " + json.name;
+        document.getElementById("titleHtml").innerHTML = "lagent_titi | " + json.name;
 
         if(json.picture.videoId !== "") {
           document.getElementById("picture").innerHTML =
@@ -40,6 +39,7 @@ function Project() {
         };
 
         for(i=0;i<=json.picture.galery.length-1;i++) {
+          console.log(i)
           document.getElementById("picture").innerHTML = document.getElementById("picture").innerHTML +
           `
           <div id="picture${i+1}" style="display: none;">
@@ -48,7 +48,7 @@ function Project() {
           `;
         };
         
-        for(a=0;a<=json.links.length;a++) {
+        for(a=0;a<=json.links.length-1;a++) {
           document.getElementById("linkList").innerHTML = document.getElementById("linkList").innerHTML +
           `
           <li>
@@ -64,7 +64,6 @@ function Project() {
   xhr.open('GET', `./projects/${param}.json`);
   xhr.send();
 };
-
 Project();
 
 function buttonPicture(option) {
