@@ -25,5 +25,10 @@
   background-color: rgb(201, 198, 198)
 }
 img {
-  max-width: 500px;
+  max-width: 1000px;
+}
+@media screen and (max-width: 500px) {
+  img {
+    max-width: 100% !important;
+  }
 }

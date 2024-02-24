@@ -70,4 +70,22 @@
   #description {
     width: auto;
   }
+  .pp,
+  .pp > img {
+    max-width: 100%;
+    height: 100%;
+  }
+  #playerRight {
+    padding-right: 0;
+  }
+  #playerLeft {
+    padding-left: 0;
+  }
+  #img {
+    display: flex;
+    justify-content: center;
+  }
+  #linkList {
+    justify-content: center;
+  }
 }

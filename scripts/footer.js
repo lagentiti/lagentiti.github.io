@@ -76,4 +76,4 @@ setTimeout(() => {
   settingTxtColor();
   projectList();
   tutoList();
-}, 60);
+}, 100);

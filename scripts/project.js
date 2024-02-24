@@ -34,7 +34,7 @@ function Project() {
         if(json.picture.videoId !== "") {
           document.getElementById("picture").innerHTML =
           `
-          <iframe id="picture0" width="900" height="400" src="https://www.youtube.com/embed/${json.picture.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe id="picture0" class="pp" width="900" height="400" src="https://www.youtube.com/embed/${json.picture.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           `;
         };
 
@@ -42,7 +42,7 @@ function Project() {
           console.log(i)
           document.getElementById("picture").innerHTML = document.getElementById("picture").innerHTML +
           `
-          <div id="picture${i+1}" style="display: none;">
+          <div id="picture${i+1}" class="pp" style="display: none;">
             <img src="${json.picture.galery[i]}" width="900" height="400">
           </div>
           `;
