@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": "0",
+    "name": "S&BOX TUTO",
+    "description": "S&BOX TUTO",
+    "icon": "./img/tutos/s&box.png",
+    "link": "https://www.youtube.com/playlist?list=PLovVqy8o2hN08_nLmrteNsO4ykq0A_bbs"
+  }
+]
