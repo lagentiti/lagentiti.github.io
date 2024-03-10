@@ -3,7 +3,7 @@
   "id": 0,
   "description": "this app allows you to change the color of your nickname in Twitch chats automatically",
   "picture": {
-    "icon": "https://github.com/lagentiti/twitch-username-color-random-extension/main/icons/icon128.png",
+    "icon": "https://raw.githubusercontent.com/lagentiti/twitch-username-color-random-extension/main/icons/icon128.png",
     "couverture": "./img/Twitch-Username-Rainbow-Color-Extension/couverture.png",
     "videoId": "0000000",
     "galery": [
