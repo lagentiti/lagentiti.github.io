@@ -46,11 +46,11 @@
 #projectItem:hover {
   background-color: rgb(228, 228, 228)
 }
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) { */
   #projectItem {
     min-width: auto;
   }
-}
+/* } */
 #search {
   display: flex;
   padding: 15px;

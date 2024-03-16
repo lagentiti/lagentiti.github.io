@@ -32,5 +32,6 @@
   background-color: rgb(228, 228, 228);
   padding: 10px;
   border-radius: 5px;
-  min-width: 1000px;
+  max-width: 1000px;
+  width: auto;
 }

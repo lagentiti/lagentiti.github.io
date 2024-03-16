@@ -13,3 +13,5 @@ Disallow: /security.txt
 Disallow: /actus.json
 Disallow: /img/
 Disallow: /project.html
+
+Sitemap: https://lagentiti.github.io/sitemap.xml

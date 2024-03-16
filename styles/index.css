@@ -26,9 +26,5 @@
 }
 img {
   max-width: 1000px;
-}
-@media screen and (max-width: 500px) {
-  img {
-    max-width: 100% !important;
-  }
+  width: 100% !important;
 }
